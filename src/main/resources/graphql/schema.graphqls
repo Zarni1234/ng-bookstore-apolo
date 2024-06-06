@@ -1,0 +1,22 @@
+scalar Date
+@specifiedBy(url: "https://tools.ietf.org/html/rfc3339")
+
+type Book{
+    id:String,
+    title:String,
+    price:Float,
+    imgUrl:String,
+    publishedDate:Date
+    author:Author
+}
+
+type Author{
+    firstName:String,
+    lastName:String
+}
+
+type Query{
+    allBooks:[Book]
+    getBookById(id:ID) : Book
+}
+
